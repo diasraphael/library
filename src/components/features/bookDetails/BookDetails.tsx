@@ -65,7 +65,7 @@ const BookDetails = () => {
     <>
       <Link to={`/book`}>
         <h1 className="text-2xl font-medium pb-8 cursor-pointer hover:text-[#C7511F] transition-colors hover:underline hover:underline-offset-8">
-          back
+          Back
         </h1>
       </Link>
       {loading && <DetailsSkeleton></DetailsSkeleton>}

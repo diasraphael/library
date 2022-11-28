@@ -34,7 +34,7 @@ const Book = (props: BookProps) => {
           </h1>
         </Link>
         <Field label="Info" value={time}></Field>
-        <Field label="Author" value={author.join(", ")}></Field>
+        <Field label="Author" value={author && author.join(", ")}></Field>
         <Field label="Total Editions" value={edition_count}></Field>
         <Field label="Publish Year" value={first_publish_year}></Field>
       </div>

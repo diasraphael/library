@@ -1,10 +1,12 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import { BookProps } from "../../components/features/bookList/Book";
+import { BookDetail } from "../../constants/types";
 
 export interface BookState {
   searchTerm: string;
   hasErrors: boolean;
-  booklist: [];
-  book: any;
+  booklist: BookProps[];
+  book: BookDetail | null;
 }
 
 export const initialState: BookState = {
@@ -18,7 +20,7 @@ const bookSlice = createSlice({
   name: "book",
   initialState,
   reducers: {
-    searchBook(state, action: PayloadAction<string>) {
+    searchBook(state, action) {
       state.searchTerm = action.payload;
       state.booklist = [];
     },
